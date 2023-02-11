@@ -36,7 +36,7 @@ app.use(limiter);
 // Mongo DB Database Connection
 let URI = "mongodb://127.0.0.1:27017/todo";
 let atlusUrl = process.env.ATLUS_URL;
-let OPTION = { user: process.env.DB_USERNAME, pass: process.env.DB_PASSWORD, autoIndex: true };
+let OPTION = { user: process.env.DB_USER, pass: process.env.DB_PASSWORD, autoIndex: true };
 mongoose.connect(atlusUrl, OPTION, (e) => {
   console.log("Connection Success");
   console.log(e);
